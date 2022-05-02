@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root {
+  --clr-text-blue: hsl(238, 29%, 16%);
+  --clr-text-red: hsl(14, 88%, 65%);
+  --clr-text-very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --clr-text-dark-grayish-blue: hsl(240, 6%, 50%);
+  --clr-back-violet: hsl(273, 75%, 66%);
+  --clr-back-blue: hsl(240, 73%, 65%);
+  --divider-light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--clr-back-violet),
+    var(--clr-back-blue)
+  );
+  background-attachment: fixed;
+}
+
+.img-mobile {
+  position: absolute;
+  z-index: 3;
+  scale: 75%;
+  top: 20px;
+}
+
+.faq-container {
+  background-color: white;
+  margin: 50% 5% 0 5%;
+  padding: 40% 5% 10% 5%;
+  border-radius: 20px;
+  box-shadow: 0 30px 100px -60px black;
+}
+
+.accordion {
+  background-color: white;
+  border-bottom: solid 1px var(--divider-light-grayish-blue) !important ;
+  padding: 1% 0 3% 0;
+  margin: 2% 0;
+  border: none;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  color: var(--clr-text-blue);
+  font-size: 0.75rem;
+}
+
+.accordion:hover {
+  cursor: pointer;
+  color: var(--clr-text-red);
+}
+
+.pannel {
+  border-bottom: solid 1px var(--divider-light-grayish-blue);
+  padding: 3% 0;
+  margin: 2% 0;
+}
+
+.arrow {
+  justify-content: right;
+}
+
+p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--clr-text-dark-grayish-blue);
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--clr-text-blue);
+  padding-bottom: 3%;
+}
+
+.hidden {
+  display: none;
+}
+
+.accordion-active {
+  border-bottom: none !important;
+  padding: 0;
+  margin-bottom: -2%;
+  margin-top: 3%;
+  font-weight: 700;
+  color: var(--clr-text-blue);
+}
+
+.arrow-active {
+  transform: scaleY(-1);
+}
+
+.pannel {
+  display: none;
+  overflow: hidden;
+}
+
+.attribution {
+  display: none;
+}
+.desktop-img {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .img-mobile {
+    position: fixed;
+    scale: 30%;
+    top: 10px;
+    right: 30%;
+  }
+  .faq-container {
+    background-color: white;
+    margin: 10% 20%;
+    padding: 3% 5% 3% 30%;
+    border-radius: 20px;
+    box-shadow: 0 30px 100px -60px black;
+  }
+  h1 {
+    text-align: left;
+    padding-bottom: 10%;
+  }
+  .accordion {
+    padding: 2% 0 6% 0;
+    margin: 4% 0;
+  }
+  .pannel {
+    border-bottom: solid 1px var(--divider-light-grayish-blue);
+    padding: 6% 0;
+    margin: 4% 0;
+  }
+  .accordion-active {
+    padding: 0;
+    margin-bottom: -4%;
+  }
+}
